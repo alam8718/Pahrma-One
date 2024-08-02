@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {Link} from "react-router-dom";
 
 function UserProfile({userImg, name, role}) {
   const [profileOption, setProfileOption] = useState(false);
@@ -35,19 +36,19 @@ function UserProfile({userImg, name, role}) {
             <div className="w-[125px] h-[86px] absolute top-10 -right-2">
               <p className="bg-white w-[20px] h-[20px] rounded-[4px] rotate-45 absolute right-1.5 -top-1 z-10"></p>
               <div className="relative bg-white w-full h-full z-20 rounded-[4px] flex flex-col items-center justify-between">
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="w-full h-[42px] flex items-center justify-center gap-3 font-poppins text-[#1D242E] hover:bg-gray-200">
                   <img src="/public/icons/profile-icon.png" alt="profile" />
                   Profile
-                </a>
+                </Link>
                 <hr className="w-full h-[1.5px] bg-gray-400" />
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="w-full h-[42px] flex items-center justify-center gap-3 font-poppins text-[#F0483E] hover:bg-gray-200">
                   <img src="/public/icons/logout-icon.png" alt="logout" />
                   Logout
-                </a>
+                </Link>
               </div>
             </div>
           )}

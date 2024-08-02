@@ -1,7 +1,7 @@
 import React from "react";
 import {useGlobalContext} from "../../context/GlobalContext";
-import {Link} from "react-router-dom";
 import InventoryCard from "../../utils/InventoryCard";
+import {cards} from "../../Data/InventoryData";
 
 function Inventory() {
   const {sidebarPresent} = useGlobalContext();
@@ -44,8 +44,18 @@ function Inventory() {
             </button>
           </div>
           {/* cards */}
-          <div>
-            <InventoryCard title={"Medi"} btnName count icon />
+          <div className="flex flex-wrap gap-8">
+            {cards.map((card, index) => (
+              <InventoryCard
+                key={index + 1}
+                title={card?.title}
+                btnName={card?.btnName}
+                count={card?.count}
+                icon={card?.icon}
+                color={card?.color}
+                btnColor={card?.btnColor}
+              />
+            ))}
           </div>
         </div>
       </div>

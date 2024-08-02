@@ -1,28 +1,30 @@
-import React, {useState} from "react";
+import React from "react";
 import SideBarSection from "./SideBarSection";
+import {useGlobalContext} from "../../context/GlobalContext";
 
 function Sidebar({sideOpen, setSideOpen}) {
-  const [active, setActive] = useState("dashboard");
-
+  const {active, setActive} = useGlobalContext();
   return (
     <div className="w-full h-full ">
       {/* overlay */}
       <div className={`bg-black/30 fixed inset-0 -z-10 `}></div>
       <button
         onClick={() => setSideOpen(false)}
-        className="fixed z-30 top-2 right-2">
+        className="fixed z-30 top-2 right-2 w-6 h-6 rounded-full bg-white flex items-center justify-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="none"
+          width="24"
+          height="24"
           viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="currentColor"
-          className="size-6">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-          />
+          fill="none"
+          stroke="black"
+          strokeWidth="2.75"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-circle-x">
+          <circle cx="12" cy="12" r="10" />
+          <path d="m15 9-6 6" />
+          <path d="m9 9 6 6" />
         </svg>
       </button>
       <SideBarSection active={active} setActive={setActive} />

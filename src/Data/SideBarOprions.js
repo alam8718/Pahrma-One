@@ -15,7 +15,7 @@ export const FirstGroupOption = [
       },
       {
         name: "Medicine Groups",
-        link: "#",
+        link: "/inventory/medicine-group",
       },
     ],
   },

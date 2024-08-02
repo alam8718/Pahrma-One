@@ -1,15 +1,15 @@
+import {useState} from "react";
 import {Link} from "react-router-dom";
 
 function Option({option, active, setActive}) {
+  const [dropOpen, setDropOpen] = useState(false);
+  console.log("active", active);
   return (
     <div
+      onClick={() => setDropOpen(!dropOpen)}
       className="w-full overflow-hidden"
       style={{
-        height: `${
-          option.children && active === option?.name.toLowerCase()
-            ? `${46 * (1 + option?.children?.length)}px`
-            : "46px"
-        }`,
+        height: `${dropOpen && `${46 * (1 + option?.children?.length)}px`}`,
       }}>
       <Link
         onClick={() => {
@@ -54,9 +54,16 @@ function Option({option, active, setActive}) {
       </Link>
       {option?.children?.map((option, index) => (
         <Link
+          onClick={() => {
+            setActive(option?.name.toLowerCase());
+          }}
           to={option?.link}
           key={index + 1}
-          className="pl-14 flex flex-col h-[46px] justify-center hover:bg-[#009099]/20">
+          className={`pl-14 flex flex-col h-[46px] justify-center ${
+            active === option?.name.toLowerCase()
+              ? "bg-[#009099]"
+              : "hover:bg-[#009099]/20"
+          }`}>
           {option?.name}
         </Link>
       ))}

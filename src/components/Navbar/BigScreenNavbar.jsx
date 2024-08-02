@@ -4,8 +4,9 @@ import {useGlobalContext} from "../../context/GlobalContext";
 import Clock from "../../utils/Clock";
 
 function BigScreenNavbar() {
-  const [active, setActive] = useState("dashboard");
-  const {sidebarPresent, setSidebarPresent} = useGlobalContext();
+
+  const {active, setActive, sidebarPresent, setSidebarPresent} =
+    useGlobalContext();
   return (
     <div>
       <div className="flex">

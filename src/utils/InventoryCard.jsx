@@ -1,26 +1,26 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-function InventoryCard({title, btnName, count, icon}) {
+function InventoryCard({title, btnName, btnColor, count, icon, color}) {
   return (
     <div
-      className="w-[212px] h-[152px] relative"
-      style={{border: "1px solid #03A9F5"}}>
+      className="w-[212px] h-[152px] relative rounded-[4px]"
+      style={{border: `1px solid ${color}`}}>
       {/* 1st part */}
-      <div className="w-full h-[125px] flex flex-col gap-1.5 justify-center border-b border-b-[#03A9F5] items-center">
+      <div
+        className="w-full h-[125px] flex flex-col gap-1.5 justify-center items-center"
+        style={{borderBottom: `1px solid ${color}`}}>
         <div className="w-[37px] h-[37px] flex items-center justify-center">
-          <img src="/public/icons/bag1.png" className=" " alt="" />
+          <img src={icon} alt="" />
         </div>
-        <p className="text-[20px] leading-[22px] font-bold">123</p>
-        <p className="text-[14px] leading-[22px] font-medium">
-          Medicines Available
-        </p>
+        <p className="text-[20px] leading-[22px] font-bold">{count}</p>
+        <p className="text-[14px] leading-[22px] font-medium">{title}</p>
       </div>
       {/* 2nd part */}
       <Link
         className="flex items-center justify-center w-full h-[calc(100%-125px)] text-[12px] leading-[22px]"
-        style={{backgroundColor: "#03A9F54D"}}>
-        View Full List
+        style={{backgroundColor: `${btnColor}`}}>
+        <p className="!text-black">{btnName}</p>
         {/* icon  */}
         <div className="rotate-90">
           <svg

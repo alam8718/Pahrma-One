@@ -5,7 +5,7 @@ import {
   FirstGroupOption,
   SecondGroupOption,
   ThirdGroupOption,
-} from "../../utils/SideBarOprions";
+} from "../../Data/SideBarOprions";
 import {useGlobalContext} from "../../context/GlobalContext";
 
 function SideBarSection({bigScreen = false, active, setActive}) {
