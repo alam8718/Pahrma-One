@@ -15,7 +15,7 @@ function UserProfile({userImg, name, role}) {
               alt="user"
             />
           </div>
-          <div className="w-[130px]">
+          <div className="w-[145px]">
             <p className="text-[14px] leading-[21px] font-medium font-poppins">
               {name}
             </p>
@@ -37,14 +37,14 @@ function UserProfile({userImg, name, role}) {
               <div className="relative bg-white w-full h-full z-20 rounded-[4px] flex flex-col items-center justify-between">
                 <a
                   href="#"
-                  className="w-full h-[42px] flex items-center justify-center gap-3 font-poppins text-[#1D242E]">
+                  className="w-full h-[42px] flex items-center justify-center gap-3 font-poppins text-[#1D242E] hover:bg-gray-200">
                   <img src="/public/icons/profile-icon.png" alt="profile" />
                   Profile
                 </a>
-                <hr className="w-full h-[1.5px] bg-[#1D242E]/50" />
+                <hr className="w-full h-[1.5px] bg-gray-400" />
                 <a
                   href="#"
-                  className="w-full h-[42px] flex items-center justify-center gap-3 font-poppins text-[#F0483E]">
+                  className="w-full h-[42px] flex items-center justify-center gap-3 font-poppins text-[#F0483E] hover:bg-gray-200">
                   <img src="/public/icons/logout-icon.png" alt="logout" />
                   Logout
                 </a>
