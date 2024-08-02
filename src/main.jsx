@@ -13,6 +13,7 @@ import {
 import Dashboard from "./components/Dashboard/Dashboard.jsx";
 import Inventory from "./components/Inventory/Inventory.jsx";
 import Group from "./components/Inventory/Mgroup/Group.jsx";
+import GroupDetails from "./components/Inventory/Mgroup/GroupDetails.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route path="/" exact element={<Dashboard />} />
       <Route path="/inventory" element={<Inventory />} />
       <Route path="/inventory/medicine-group" element={<Group />} />
+      <Route path="/inventory/medicine-group/:id" element={<GroupDetails />} />
     </Route>
   )
 );

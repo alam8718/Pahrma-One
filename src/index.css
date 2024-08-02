@@ -5,11 +5,13 @@
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
+  height: 7px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: #1D242E;
+  border-radius: 5px;
 }
 
 /* Handle */

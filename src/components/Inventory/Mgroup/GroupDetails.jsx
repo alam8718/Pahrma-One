@@ -1,11 +1,11 @@
 import React from "react";
 import PageWrapper from "../../wrapper/PageWrapper";
 import Breadcrumb from "../../../utils/BreadCrumb";
-import Table from "../../../utils/Table";
+import Table2 from "../../../utils/Table2";
 
-function Group() {
+function GroupDetails() {
   const headers = [
-    {name: "Group Name", arrow: true},
+    {name: "Medicine Name", arrow: true},
     {name: "No Of Medicines", arrow: true},
     {name: "Action", arrow: false},
   ];
@@ -18,7 +18,7 @@ function Group() {
           <div className="h-full">
             <Breadcrumb />
             <p className="pt-2 text-[#1D242E] text-[14px] leading-[21px] font-normal font-poppins">
-              List of medicines groups.
+              Detailed view of a medicine group.
             </p>
           </div>
           {/* add new item btn */}
@@ -37,7 +37,7 @@ function Group() {
               />
             </svg>
             <p className="text-[15px] leading-[22px] font-poppins">
-              Add New Group
+              Add Medicine
             </p>
           </button>
         </div>
@@ -46,7 +46,7 @@ function Group() {
           <input
             type="text"
             className="w-full bg-transparent outline-none placeholder:text-[#1D242E] text-[12px] font-poppins "
-            placeholder="Search for anything here..."
+            placeholder="Search for Medicine"
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -64,11 +64,30 @@ function Group() {
         </div>
       </div>
       {/* table part */}
-      <div>
-        <Table headers={headers} />
+      <div className="mb-10 shadow-md">
+        <Table2 headers={headers} />
       </div>
+      {/* delete group btn */}
+      <button className="w-[161px] h-[46px] border border-[#F0483E] rounded-[4px] flex items-center justify-center gap-2 text-[#F0483E] ">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#F0483E"
+          strokeWidth="2.75"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-trash">
+          <path d="M3 6h18" />
+          <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+          <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+        </svg>
+        Delete Group
+      </button>
     </PageWrapper>
   );
 }
 
-export default Group;
+export default GroupDetails;
