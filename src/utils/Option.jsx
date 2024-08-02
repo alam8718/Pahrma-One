@@ -33,11 +33,21 @@ function Option({option, active, setActive}) {
         </div>
         {/* arrow icon */}
         {option?.children && (
-          <img
-            src="/public/icons/downArrow.png"
-            className="w-[8px] h-[5px]"
-            alt="down arrow"
-          />
+          <div>
+            {active === option?.name.toLowerCase() ? (
+              <img
+                src="/public/icons/upArrow.png"
+                className="w-[8px] h-[5px]"
+                alt="down arrow"
+              />
+            ) : (
+              <img
+                src="/public/icons/downArrow.png"
+                className="w-[8px] h-[5px]"
+                alt="down arrow"
+              />
+            )}
+          </div>
         )}
       </a>
       {option?.children?.map((option, index) => (

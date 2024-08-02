@@ -1,16 +1,5 @@
 import React, {useState} from "react";
-import {FaRegCircleUser} from "react-icons/fa6";
-import {IoIosCloseCircleOutline} from "react-icons/io";
-import {IoEllipsisVerticalSharp} from "react-icons/io5";
-import {MdLogout, MdOutlineSpaceDashboard} from "react-icons/md";
-import {SlGraph} from "react-icons/sl";
-import UserProfile from "../../utils/UserProfile";
-import {
-  FirstGroupOption,
-  SecondGroupOption,
-  ThirdGroupOption,
-} from "../../utils/SideBarOprions";
-import Option from "../../utils/Option";
+import SideBarSection from "./SideBarSection";
 
 function Sidebar({sideOpen, setSideOpen}) {
   const [active, setActive] = useState("dashboard");
@@ -22,52 +11,21 @@ function Sidebar({sideOpen, setSideOpen}) {
       <button
         onClick={() => setSideOpen(false)}
         className="fixed z-30 top-2 right-2">
-        <IoIosCloseCircleOutline size={30} />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="currentColor"
+          className="size-6">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          />
+        </svg>
       </button>
-      <div className="w-[256px] h-full bg-[#1D242E] ">
-        {/* logo and name */}
-        <div className="bg-[#1D242E] w-full h-[60px] flex items-center justify-center gap-6">
-          <img src="/public/logo.png" alt="logo" />
-          <p className="text-[18px] leading-[24px] font-poppins text-white font-semibold">
-            Pharma One
-          </p>
-        </div>
-        {/* rest part */}
-        <div className="w-full h-[calc(100%-60px)] text-white bg-[#283342] overflow-y-auto">
-          {/* user part */}
-          <UserProfile name="Subash" role="super Admin" />
-          {/* rest part */}
-          <div className="w-full">
-            {FirstGroupOption.map((option, index) => (
-              <Option
-                option={option}
-                key={index + 1}
-                active={active}
-                setActive={setActive}
-              />
-            ))}
-            <hr className="h-[1px] bg-gray-700 my-5" />
-            {SecondGroupOption.map((option, index) => (
-              <Option
-                option={option}
-                key={index + 1}
-                active={active}
-                setActive={setActive}
-              />
-            ))}
-            <hr className="h-[1px] bg-gray-700 my-5" />
-
-            {ThirdGroupOption.map((option, index) => (
-              <Option
-                option={option}
-                key={index + 1}
-                active={active}
-                setActive={setActive}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
+      <SideBarSection active={active} setActive={setActive} />
     </div>
   );
 }

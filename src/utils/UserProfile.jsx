@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function UserProfile({name, role}) {
+function UserProfile({userImg, name, role}) {
   const [profileOption, setProfileOption] = useState(false);
   return (
     <div className="w-full h-[120px] flex items-center justify-center">
@@ -10,8 +10,8 @@ function UserProfile({name, role}) {
             {/* active status */}
             <p className="absolute bg-[#2ED47A] w-[14px] h-[14px] rounded-full bottom-1 -right-2 border-[2px] border-[#2E3744]"></p>
             <img
-              src="/public/userImg.png"
-              className="w-full h-full overflow-hidden"
+              src={userImg}
+              className="w-full h-full overflow-hidden object-cover"
               alt="user"
             />
           </div>
