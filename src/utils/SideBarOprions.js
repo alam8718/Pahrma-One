@@ -1,12 +1,12 @@
 export const FirstGroupOption = [
   {
     name: "Dashboard",
-    link: "#",
+    link: "/",
     icon: "/public/icons/dashboard.png",
   },
   {
     name: "Inventory",
-    link: "#",
+    link: "/inventory",
     icon: "/public/icons/inventory-icon.png",
     children: [
       {

@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 function Option({option, active, setActive}) {
   return (
     <div
@@ -9,11 +11,11 @@ function Option({option, active, setActive}) {
             : "46px"
         }`,
       }}>
-      <a
+      <Link
         onClick={() => {
           setActive(option?.name.toLowerCase());
         }}
-        href={option?.link}
+        to={option?.link}
         className={`w-full h-[46px] flex justify-between items-center  pl-7 pr-4 ${
           active === option?.name.toLowerCase()
             ? "bg-[#009099]"
@@ -49,14 +51,14 @@ function Option({option, active, setActive}) {
             )}
           </div>
         )}
-      </a>
+      </Link>
       {option?.children?.map((option, index) => (
-        <a
-          href={option?.link}
+        <Link
+          to={option?.link}
           key={index + 1}
           className="pl-14 flex flex-col h-[46px] justify-center hover:bg-[#009099]/20">
           {option?.name}
-        </a>
+        </Link>
       ))}
     </div>
   );
