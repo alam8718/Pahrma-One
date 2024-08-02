@@ -7,10 +7,7 @@ function Option({option, active, setActive}) {
   return (
     <div
       onClick={() => setDropOpen(!dropOpen)}
-      className="w-full overflow-hidden"
-      style={{
-        height: `${dropOpen && `${46 * (1 + option?.children?.length)}px`}`,
-      }}>
+      className="w-full overflow-hidden">
       <Link
         onClick={() => {
           setActive(option?.name.toLowerCase());
@@ -52,21 +49,22 @@ function Option({option, active, setActive}) {
           </div>
         )}
       </Link>
-      {option?.children?.map((option, index) => (
-        <Link
-          onClick={() => {
-            setActive(option?.name.toLowerCase());
-          }}
-          to={option?.link}
-          key={index + 1}
-          className={`pl-14 flex flex-col h-[46px] justify-center ${
-            active === option?.name.toLowerCase()
-              ? "bg-[#009099]"
-              : "hover:bg-[#009099]/20"
-          }`}>
-          {option?.name}
-        </Link>
-      ))}
+      {dropOpen &&
+        option?.children?.map((option, index) => (
+          <Link
+            onClick={() => {
+              setActive(option?.name.toLowerCase());
+            }}
+            to={option?.link}
+            key={index + 1}
+            className={`pl-14 flex flex-col h-[46px] justify-center ${
+              active === option?.name.toLowerCase()
+                ? "bg-[#009099]"
+                : "hover:bg-[#009099]/20"
+            }`}>
+            {option?.name}
+          </Link>
+        ))}
     </div>
   );
 }

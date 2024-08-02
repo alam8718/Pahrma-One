@@ -1,8 +1,13 @@
 import React from 'react'
+import PageWrapper from '../wrapper/PageWrapper'
+import Breadcrumb from '../../utils/BreadCrumb'
 
 function Dashboard() {
   return (
-    <div>Dashboard</div>
+    <PageWrapper>
+      <Breadcrumb />
+      
+    </PageWrapper>
   )
 }
 
