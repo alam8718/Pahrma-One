@@ -1,11 +1,6 @@
 import React from "react";
 
-const Table2 = ({headers}) => {
-  const data = [
-    {groupName: "Augmentin 625 Duo Tablet", noOfMedicines: "22"},
-    {groupName: "Azithral 500 Tablet", noOfMedicines: "08"},
-  ];
-
+const Table2 = ({headers, data}) => {
   return (
     <div className="overflow-x-auto">
       <div className=" relative w-full h-full">
@@ -47,7 +42,7 @@ const Table2 = ({headers}) => {
                   <div className="flex items-center gap-3  w-[200px]">
                     <div className="w-full  flex  gap-5 items-center">
                       <h1 className="text-[14px] leading-[22px] capitalize  font-poppins  ">
-                        {item?.groupName}
+                        {item?.name}
                       </h1>
                     </div>
                   </div>
@@ -57,7 +52,7 @@ const Table2 = ({headers}) => {
                   <div className="flex items-center gap-3 w-[200px]">
                     <div className="w-full  flex flex-col gap-2">
                       <h1 className="text-[14px] leading-[22px]  font-poppins  ">
-                        {item?.noOfMedicines}
+                        {item?.count}
                       </h1>
                     </div>
                   </div>
