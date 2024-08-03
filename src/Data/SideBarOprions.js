@@ -36,7 +36,7 @@ export const FirstGroupOption = [
   },
   {
     name: "Configuration",
-    link: "#",
+    link: "/configuration",
     icon: "/public/icons/configure-icon.png",
   },
 ];

@@ -18,6 +18,7 @@ import ListOfMed from "./components/Inventory/ListOfMed.jsx";
 import ReportPage from "./components/Reports/ReportPage.jsx";
 import PaymentRepoPage from "./components/Reports/PaymentReportPage.jsx";
 import SalesRepoPage from "./components/Reports/SalesReportPage.jsx";
+import ConfigurationPage from "./components/Dashboard/ConfigurationPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -42,6 +43,8 @@ const router = createBrowserRouter(
         exact
         element={<PaymentRepoPage />}
       />
+      <Route path="/configuration" exact element={<ConfigurationPage />} />
+
     </Route>
   )
 );
