@@ -11,26 +11,26 @@ export const FirstGroupOption = [
     children: [
       {
         name: "List of Medicines",
-        link: "#",
+        link: "/inventory/list of medicines",
       },
       {
         name: "Medicine Groups",
-        link: "/inventory/medicine-group",
+        link: "/inventory/medicine group",
       },
     ],
   },
   {
     name: "Reports",
-    link: "#",
+    link: "/report",
     icon: "/public/icons/report-icon.png",
     children: [
       {
         name: "Sales Report",
-        link: "#",
+        link: "/report/sales report",
       },
       {
         name: "Payments Report",
-        link: "#",
+        link: "/report/payments report",
       },
     ],
   },

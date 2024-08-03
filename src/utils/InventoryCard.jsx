@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-function InventoryCard({title, btnName, btnColor, count, icon, color}) {
+function InventoryCard({title, btnName, btnColor, count, icon, color, link}) {
   return (
     <div
       className="w-[212px] h-[152px] relative rounded-[4px]"
@@ -18,6 +18,7 @@ function InventoryCard({title, btnName, btnColor, count, icon, color}) {
       </div>
       {/* 2nd part */}
       <Link
+        to={link}
         className="flex items-center justify-center w-full h-[calc(100%-125px)] text-[12px] leading-[22px]"
         style={{backgroundColor: `${btnColor}`}}>
         <p className="!text-black">{btnName}</p>

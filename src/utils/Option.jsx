@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 
 function Option({option, active, setActive}) {
   const [dropOpen, setDropOpen] = useState(false);
+  const parent = option?.name;
   return (
     <div
       onClick={() => setDropOpen(!dropOpen)}

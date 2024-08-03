@@ -1,10 +1,8 @@
 import React from "react";
-import InventoryCard from "../../utils/InventoryCard";
-import {cards} from "../../Data/InventoryData";
 import PageWrapper from "../wrapper/PageWrapper";
 import Breadcrumb from "../../utils/BreadCrumb";
 
-function Inventory() {
+function ListOfMed() {
   return (
     <PageWrapper>
       {/* top part */}
@@ -36,24 +34,9 @@ function Inventory() {
           </p>
         </button>
       </div>
-      {/* cards */}
-      <div className="flex flex-wrap gap-8">
-        {cards.map((card, index) => (
-          <InventoryCard
-            key={index + 1}
-            title={card?.title}
-            btnName={card?.btnName}
-            count={card?.count}
-            icon={card?.icon}
-            color={card?.color}
-            btnColor={card?.btnColor}
-            link={card?.link}
-          />
-        ))}
-      </div>
-      {/*  */}
+      <div className="flex flex-wrap gap-8 text-xl">List of medicines Page</div>
     </PageWrapper>
   );
 }
 
-export default Inventory;
+export default ListOfMed;

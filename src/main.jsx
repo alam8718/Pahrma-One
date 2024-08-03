@@ -14,14 +14,34 @@ import Dashboard from "./components/Dashboard/Dashboard.jsx";
 import Inventory from "./components/Inventory/Inventory.jsx";
 import Group from "./components/Inventory/Mgroup/Group.jsx";
 import GroupDetails from "./components/Inventory/Mgroup/GroupDetails.jsx";
+import ListOfMed from "./components/Inventory/ListOfMed.jsx";
+import ReportPage from "./components/Reports/ReportPage.jsx";
+import PaymentRepoPage from "./components/Reports/PaymentReportPage.jsx";
+import SalesRepoPage from "./components/Reports/SalesReportPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="/" exact element={<Dashboard />} />
       <Route path="/inventory" element={<Inventory />} />
-      <Route path="/inventory/medicine-group" element={<Group />} />
-      <Route path="/inventory/medicine-group/:id" element={<GroupDetails />} />
+      <Route path="/inventory/medicine group" exact element={<Group />} />
+      <Route
+        path="/inventory/list of medicines"
+        exact
+        element={<ListOfMed />}
+      />
+      <Route
+        path="/inventory/medicine-group/:id"
+        exact
+        element={<GroupDetails />}
+      />
+      <Route path="/report" exact element={<ReportPage />} />
+      <Route path="/report/sales report" exact element={<SalesRepoPage />} />
+      <Route
+        path="/report/payments report"
+        exact
+        element={<PaymentRepoPage />}
+      />
     </Route>
   )
 );
