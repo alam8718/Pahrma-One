@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
 
-function Option({option, active, setActive}) {
+function Option({notiCount = false, option, active, setActive}) {
   const [dropOpen, setDropOpen] = useState(false);
   const parent = option?.name;
   return (
@@ -47,6 +47,11 @@ function Option({option, active, setActive}) {
               />
             )}
           </div>
+        )}
+        {notiCount && (
+          <p className="w-[20px] h-[20px] rounded-full bg-[#F0483E] flex items-center justify-center text-[10px] leading-[15px] font-medium font-poppins">
+            {Number(notiCount)}
+          </p>
         )}
       </Link>
       {dropOpen &&

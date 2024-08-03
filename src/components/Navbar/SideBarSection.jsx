@@ -51,6 +51,7 @@ function SideBarSection({bigScreen = false, active, setActive}) {
                 key={index + 1}
                 active={active}
                 setActive={setActive}
+                notiCount={option?.notiCount}
               />
             ))}
             <hr className="h-[1px] bg-gray-700 my-5" />
@@ -60,6 +61,7 @@ function SideBarSection({bigScreen = false, active, setActive}) {
                 key={index + 1}
                 active={active}
                 setActive={setActive}
+                notiCount={option?.notiCount}
               />
             ))}
             <hr className="h-[1px] bg-gray-700 my-5" />
@@ -69,6 +71,7 @@ function SideBarSection({bigScreen = false, active, setActive}) {
                 key={index + 1}
                 active={active}
                 setActive={setActive}
+                notiCount={option?.notiCount}
               />
             ))}
           </div>

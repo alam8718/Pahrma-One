@@ -57,6 +57,7 @@ export const SecondGroupOption = [
     name: "Notifications",
     link: "#",
     icon: "/public/icons/notification-icon.png",
+    notiCount: "11"
   },
   {
     name: "Chat with Visitors",
