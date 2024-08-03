@@ -9,7 +9,9 @@ function PageWrapper({children}) {
         className={` ${
           sidebarPresent ? "w-full" : "lg:w-[calc(100%-256px)] w-full"
         }`}>
-        <div className="p-5 lg:p-10">{children}</div>
+        <div className="p-5 lg:p-10 overflow-y-auto h-[calc(100vh-60px)]">
+          {children}
+        </div>
       </div>
     </div>
   );
