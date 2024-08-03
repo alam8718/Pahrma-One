@@ -24,7 +24,7 @@ function ConfigurationCard({cardName, fTitle, fText, sTitle, sText}) {
         </p>
       </div>
       {/* rest */}
-      <div className="w-full min-h-[calc(100%-53px)]  flex items-center gap-16 px-10 py-7">
+      <div className="w-full min-h-[calc(100%-53px)]  flex flex-wrap items-center gap-10 sm:gap-16 px-10 py-7">
         <div className="w-[150px] flex flex-col gap-1">
           <p className="text-[20px] leading-[22px] font-bold">{fTitle}</p>
           <p className="w-full text-wrap text-[14px] leading-[22px] font-medium">
