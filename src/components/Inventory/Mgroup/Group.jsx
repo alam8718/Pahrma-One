@@ -4,10 +4,9 @@ import Breadcrumb from "../../../utils/BreadCrumb";
 import Table from "../../../utils/Table";
 
 function Group() {
-  const headers = [
-    {name: "Group Name", arrow: true},
-    {name: "No Of Medicines", arrow: true},
-    {name: "Action", arrow: false},
+  const data = [
+    {name: "Generic Medicine", count: "02"},
+    {name: "Diabetes", count: "32"},
   ];
   return (
     <PageWrapper>
@@ -65,7 +64,7 @@ function Group() {
       </div>
       {/* table part */}
       <div>
-        <Table headers={headers} />
+        <Table data={data} />
       </div>
     </PageWrapper>
   );

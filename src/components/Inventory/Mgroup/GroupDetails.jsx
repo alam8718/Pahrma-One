@@ -7,15 +7,10 @@ function GroupDetails() {
   const [addMedOpen, setAddMedOpen] = useState(false);
 
   const [medicines, setMedicines] = useState([
-    {name: "Augmentin 625 Duo Tablet", count: "22"},
+    {name: "Sugmentin 625 Duo Tablet", count: "22"},
     {name: "Azithral 500 Tablet", count: "08"},
+    {name: "Wzithral 500 Tablet", count: "11"},
   ]);
-
-  const headers = [
-    {name: "Medicine Name", arrow: true},
-    {name: "No Of Medicines", arrow: true},
-    {name: "Action", arrow: false},
-  ];
 
   const [newMedicine, setNewMedicine] = useState("");
 
@@ -96,7 +91,7 @@ function GroupDetails() {
         </div>
         {/* table part */}
         <div className="mb-10 shadow-md">
-          <Table2 headers={headers} data={medicines} />
+          <Table2 data={medicines} />
         </div>
         {/* delete group btn */}
         <button className="w-[161px] h-[46px] border border-[#F0483E] rounded-[4px] flex items-center justify-center gap-2 text-[#F0483E] ">
